@@ -20,12 +20,13 @@ public abstract class Employee extends Person{
 
     @Override
     public String toString() {
-        return "Employee {" +
-                "name = " + name +
-                ", surname = " + surname +
-                ", age = " + age +
-                ", prof = " + prof +
-                ", salary = " + basic +
-                 '}';
+        return "Employee{" +
+                "age=" + age +
+                ", prof=" + prof +
+                ", basic=" + basic +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
     }
 }
+
