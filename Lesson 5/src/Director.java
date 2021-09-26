@@ -1,23 +1,45 @@
+import java.util.Arrays;
+
 public class Director extends Employee {
-    private int age=10;
 
+    private  Employee[] employees;
 
-    public Director(String name, String surname, int age){
+    public Director(String name, String surname, int age) {
         super(name, surname, age);
     }
 
-        @Override
-        public Position getPost () {
-        return Position.DIRECTOR;
-    }
-
-        public void addWorker () {
-
+    @Override
+    public void setProf() {
+      this.prof = Position.DIRECTOR;
     }
 
 
-        public int printSalary () {
-            return 1000 * age * getPost().getKoef();
+    public void addWorker (Employee employee) {
+        if (employees == null ) {
+            employees = new Employee[1];
+            employees[0] = employee;
+        } else {
+            employees = Arrays.copyOf(employees, employees.length + 1);
+            employees[employees.length - 1] = employee;
+        }
+    }
+
+    @Override
+    public int printSalary() {
+       if (employees == null) {
+           return super.printSalary();
+       }else {
+           return super.printSalary() * employees.length;
+       }
+    }
+
+    @Override
+    public String toString() {
+        return "Director{" +
+                " prof=" + prof +
+                ", salary = " +  printSalary() +
+                ", employees=" + Arrays.toString(employees) +
+                '}';
     }
 }
 

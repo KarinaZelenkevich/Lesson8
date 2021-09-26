@@ -4,11 +4,11 @@ public class Worker extends Employee {
     public Worker(String name, String surname, int age) {
         super(name, surname, age);
     }
+
     @Override
-    public Position getPost() {
-        return Position.WORKER;
+    public void setProf() {
+    this.prof = Position.WORKER;
     }
-    public int printSalary() {
-        return  1000 * age * getPost().getKoef();
-    }
+
+
 }

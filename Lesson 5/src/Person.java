@@ -1,7 +1,7 @@
 public class Person {
 
-    private String name;
-    private String surname;
+    protected String name;
+    protected String surname;
 
     public Person(String name, String surname) {
         this.name = name;
@@ -9,7 +9,11 @@ public class Person {
 
     }
 
-    public void printInfo () {
-        System.out.println(name + " " + surname);
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
     }
 }
