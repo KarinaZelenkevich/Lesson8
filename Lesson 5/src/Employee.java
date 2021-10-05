@@ -1,8 +1,8 @@
 
-public abstract class Employee extends Person{
+public abstract class Employee extends Person {
 
     private int age;
-   protected Position prof;
+    protected Position prof;
     private int basic = 1000;
 
 
@@ -12,14 +12,15 @@ public abstract class Employee extends Person{
         setProf();
     }
 
+
     public abstract void setProf ();
 
-    public  int printSalary () {
+    public int printSalary () {
         return basic * prof.getKoef() * age;
     }
 
     @Override
-    public String toString() {
+    public String toString () {
         return "Employee{" +
                 "age=" + age +
                 ", prof=" + prof +
@@ -27,6 +28,6 @@ public abstract class Employee extends Person{
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 '}';
-    }
-}
+        }
 
+    }

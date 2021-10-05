@@ -19,9 +19,14 @@ public class Main {
 
         ((Director)director2).addWorker(worker4);
         ((Director)director1).addWorker(director2);
+//
+//        System.out.println(director1);
+//        System.out.println(director2);
 
-        System.out.println(director1);
-        System.out.println(director2);
+        SearchNamesEmpl service = new SearchNamesEmpl();
+        System.out.println(service.find((Director)director1, "D2"));
 
+        SearchEmployee serviceImpl = new SearchEmployee();
+       System.out.println(serviceImpl.find((Director)director1, "D2"));
     }
 }

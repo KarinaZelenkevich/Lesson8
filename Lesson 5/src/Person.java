@@ -1,4 +1,4 @@
-public class Person {
+public class Person{
 
     protected String name;
     protected String surname;
@@ -9,6 +9,7 @@ public class Person {
 
     }
 
+
     @Override
     public String toString() {
         return "Person{" +
@@ -17,5 +18,5 @@ public class Person {
                 '}';
     }
 
-}
 
+}

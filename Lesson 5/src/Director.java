@@ -8,6 +8,10 @@ public class Director extends Employee {
         super(name, surname, age);
     }
 
+    public Employee[] getEmployees() {
+        return employees;
+    }
+
     @Override
     public void setProf() {
       this.prof = Position.DIRECTOR;
